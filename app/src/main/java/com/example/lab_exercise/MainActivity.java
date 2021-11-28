@@ -3,6 +3,8 @@ package com.example.lab_exercise;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -10,40 +12,28 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-
     private int mCount = 0;
-    private TextView textView_count;
-    private EditText editText_text;
+    private TextView mShowCount;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button button_count = findViewById(R.id.button_count);
-        textView_count = findViewById(R.id.textView_count);
-        editText_text = findViewById(R.id.editText);
-
-        button_count.setOnClickListener(this::countUp);
-
-        if (savedInstanceState != null) {
-            mCount = savedInstanceState.getInt("Count");
-            textView_count.setText(String.valueOf(mCount));
-            editText_text.setText(savedInstanceState.getString("EditText_Text"));
-        }
+        mShowCount = findViewById(R.id.show_count);
     }
 
-    private void countUp(View view) {
+    public void launchSecondActivity(View view) {
+        Intent intent = new Intent(this, SecondActivity.class);
+        intent.putExtra("Count", mCount);
+        startActivity(intent);
+    }
+
+    @SuppressLint("SetTextI18n")
+    public void countUp(View view) {
         mCount++;
-        if (textView_count != null) {
-            textView_count.setText(String.valueOf(mCount));
+        if (mShowCount != null) {
+            mShowCount.setText(Integer.toString(mCount));
         }
-    }
-
-    @Override
-    public void onSaveInstanceState(@NonNull Bundle outState) {
-        super.onSaveInstanceState(outState);
-        outState.putInt("Count", mCount);
-        outState.putString("EditText_Text", editText_text.getText().toString());
     }
 }

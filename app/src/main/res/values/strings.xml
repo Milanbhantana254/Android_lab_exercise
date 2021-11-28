@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">Lab_Exercise</string>
-    <string name="text_count">0</string>
     <string name="button_label_count">Count</string>
-    <string name="editText_hint">Enter a Text</string>
+    <string name="button_label_sayHello">Say Hello</string>
+    <string name="count_initial_value">0</string>
+    <string name="hello">Hello!</string>
+    <string name="text_count">0</string>
 </resources>
