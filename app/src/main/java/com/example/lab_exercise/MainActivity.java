@@ -11,6 +11,8 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 public class MainActivity extends AppCompatActivity {
     private int mCount = 0;
     private TextView mShowCount;
@@ -24,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void showToast(View view) {
-        Toast.makeText(this, "Hello_Toast", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Hello Toast", Toast.LENGTH_SHORT).show();
     }
 
     @SuppressLint("SetTextI18n")
