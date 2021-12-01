@@ -25,6 +25,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 public class MainActivity extends AppCompatActivity {
 
  
@@ -54,11 +56,16 @@ public class MainActivity extends AppCompatActivity {
 
         button_count.setOnClickListener(this::countUp);
 
+ 
+    public void showToast(View view) {
+        Toast.makeText(this, "Hello Toast", Toast.LENGTH_SHORT).show();
+ 
         if (savedInstanceState != null) {
             mCount = savedInstanceState.getInt("Count");
             textView_count.setText(String.valueOf(mCount));
             editText_text.setText(savedInstanceState.getString("EditText_Text"));
         }
+ 
     }
 
     private void countUp(View view) {
