@@ -2,12 +2,13 @@ package com.example.lab_exercise;
 
  
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
  
 
- > master
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -46,14 +47,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
- 
-
-        Button button_count = findViewById(R.id.button_count);
-        textView_count = findViewById(R.id.textView_count);
-        editText_text = findViewById(R.id.editText);
-
-        button_count.setOnClickListener(this::countUp);
-
         if (savedInstanceState != null) {
             mCount = savedInstanceState.getInt("Count");
             textView_count.setText(String.valueOf(mCount));
@@ -68,17 +61,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    @Override
-    public void onSaveInstanceState(@NonNull Bundle outState) {
-        super.onSaveInstanceState(outState);
-        outState.putInt("Count", mCount);
-        outState.putString("EditText_Text", editText_text.getText().toString());
 
-      mMessageEditText = findViewById(R.id.editText_main);
-        mReplyHeadTextView = findViewById(R.id.text_header_reply);
-        mReplyTextView = findViewById(R.id.text_message_reply);
-
-    }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
