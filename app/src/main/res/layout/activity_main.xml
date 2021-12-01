@@ -29,8 +29,7 @@
                 android:id="@+id/article_subheading"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/purple_700"
-                android:text="@string/article_subtitle"
+                android:background="@color/purple_700"                android:text="@string/article_subtitle"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
                 android:textColor="@color/white"
                 android:textStyle="bold" />
@@ -42,14 +41,6 @@
                 android:autoLink="web"
                 android:lineSpacingExtra="5sp"
                 android:text="@string/article_text" />
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="8dp"
-                android:backgroundTint="#8A8A8A"
-                android:textColor="@color/black"
-                android:text="Add Comment" />
         </LinearLayout>
     </ScrollView>
 
