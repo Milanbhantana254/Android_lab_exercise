@@ -51,6 +51,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
                 android:backgroundTint="#8A8A8A"
+                android:layout_gravity="center"
                 android:textColor="@color/black"
                 android:text="Add Comment" />
         </LinearLayout>
