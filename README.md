@@ -4,4 +4,6 @@ In challenege branches i just design inside the xml file then run the applicatio
 button resulted the button will be working less. so in thi coding_challege branches i am going to solving this 
 error by doing a code inside the .java file. reulted button can work properly.
 
-#SCREENHOT
+#SCREENSHOT
+https://github.com/Milanbhantana254/Android_lab_exercise/blob/coding_challenge/deign.PNG
+https://github.com/Milanbhantana254/Android_lab_exercise/blob/coding_challenge/codingchallege.PNG
