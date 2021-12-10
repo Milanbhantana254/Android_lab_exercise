@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mShowCount = findViewById(R.id.show_count);
+
     }
 
     public void showToast(View view) {
